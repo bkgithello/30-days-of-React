@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Days Of React Challenge</title>
+    <style>
+
+    </style>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+     
+      const rootElement = document.querySelector('.root')
+
+      
+     const welcome = 'Welcome to 30 Days of React'
+     const title = 'Getting Started React'
+     const subtitle = 'JavaScript Library'
+     const authorFirstName = 'Asabeneh'
+     const authorLastName = 'Yetayeh'
+     const date = 'Oct 1, 2020'
+
+     const numOne = 3;
+     const numTwo = 2;
+
+     const result =(
+      <p>
+      {numOne} + {numTwo} = {numOne + numTwo}
+        </p>
+     )
+     const yearBorn = 1820
+     const currentYear = new Date().getFullYear()
+     const age = currentYear - yearBorn
+     const personAge = <p>{age}</p>
+
+     //JSX element, header
+     const header = (
+      <header>
+        <div className='header-wrapper'>
+          <h1>{welcome}</h1>
+          <h2>{title}</h2>
+          <h3>{subtitle}</h3>
+          <p>Instructor: {authorFirstName} {authorLastName}</p>
+          <small>Date:{date}</small>
+          <h1>{age}</h1>
+        </div>
+      </header>
+     )
+     
+     ReactDOM.render(header, rootElement)
+    </script>
+  </body>
+</html>
